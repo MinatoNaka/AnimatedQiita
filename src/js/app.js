@@ -1,6 +1,8 @@
 import VueRouter from 'vue-router';
 import ExampleComponent from "./components/ExampleComponent";
 import Top from "./views/Top";
+import ItemList from "./views/item/ItemList";
+import ItemDetail from "./views/item/ItemDetail";
 
 window.Vue = require('vue');
 
@@ -13,6 +15,16 @@ const router = new VueRouter({
             path: '/',
             name: 'top',
             component: Top
+        },
+        {
+            path: '/items',
+            name: 'item.list',
+            component: ItemList
+        },
+        {
+            path: '/items/:itemId',
+            name: 'item.detail',
+            component: ItemDetail
         },
     ]
 });
