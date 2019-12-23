@@ -1,6 +1,6 @@
 import VueRouter from 'vue-router';
 import ExampleComponent from "./components/ExampleComponent";
-import ExampleView from "./views/ExampleView";
+import Top from "./views/Top";
 
 window.Vue = require('vue');
 
@@ -11,8 +11,8 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            name: 'example',
-            component: ExampleView
+            name: 'top',
+            component: Top
         },
     ]
 });

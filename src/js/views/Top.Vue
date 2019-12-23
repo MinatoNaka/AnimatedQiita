@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>This is an Example View</p>
+        <p>Top</p>
     </div>
 </template>
 
