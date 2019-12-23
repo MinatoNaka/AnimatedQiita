@@ -5,6 +5,9 @@
         <router-link v-bind:to="{name: 'item.list'}">
             <button class="btn btn-success">Item List</button>
         </router-link>
+        <router-link v-bind:to="{name: 'user.list'}">
+            <button class="btn btn-success">User List</button>
+        </router-link>
     </div>
 </template>
 
