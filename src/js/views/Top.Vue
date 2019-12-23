@@ -8,6 +8,9 @@
         <router-link v-bind:to="{name: 'user.list'}">
             <button class="btn btn-success">User List</button>
         </router-link>
+        <router-link v-bind:to="{name: 'tag.list'}">
+            <button class="btn btn-success">Tag List</button>
+        </router-link>
     </div>
 </template>
 

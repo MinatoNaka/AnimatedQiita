@@ -5,6 +5,8 @@ import ItemList from "./views/item/ItemList";
 import ItemDetail from "./views/item/ItemDetail";
 import UserList from "./views/user/UserList";
 import UserDetail from "./views/user/UserDetail";
+import TagList from "./views/tag/TagList";
+import TagDetail from "./views/tag/TagDetail";
 
 window.Vue = require('vue');
 
@@ -29,12 +31,22 @@ const router = new VueRouter({
             component: ItemDetail
         },
         {
+            path: '/tags',
+            name: 'tag.list',
+            component: TagList
+        },
+        {
+            path: '/tags/:tagId',
+            name: 'tag.detail',
+            component: TagDetail
+        },
+        {
             path: '/users',
             name: 'user.list',
             component: UserList
         },
         {
-            path: '/user/:userId',
+            path: '/users/:userId',
             name: 'user.detail',
             component: UserDetail
         },
