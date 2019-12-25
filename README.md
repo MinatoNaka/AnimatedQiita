@@ -11,6 +11,10 @@ QiitaAPIを使って
 * パッケージインストール  
 `npm install`  
   
+* .env設定  
+`cp .env.example .env`  
+.envの`MIX_QIITA_API_TOKEN`にトークンをセット  
+
 * ビルド  
 `npm run dev`  
 ※Laravel Mixを使用  
