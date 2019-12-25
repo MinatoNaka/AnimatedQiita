@@ -9,6 +9,7 @@ import TagDetail from "./views/tag/TagDetail";
 import NavbarComponent from "./components/NavbarComponent";
 
 window.Vue = require('vue');
+window.axios = require('axios');
 
 Vue.use(VueRouter);
 
