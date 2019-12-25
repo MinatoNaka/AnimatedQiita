@@ -29,7 +29,8 @@ const router = new VueRouter({
         {
             path: '/items/:itemId',
             name: 'item.detail',
-            component: ItemDetail
+            component: ItemDetail,
+            props: true
         },
         {
             path: '/tags',
