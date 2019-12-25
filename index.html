@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="app">
-    <!--        <navbar-component></navbar-component>-->
+    <navbar-component v-if="$route.name.indexOf('top') === -1"></navbar-component>
 
     <router-view></router-view>
 </div>
