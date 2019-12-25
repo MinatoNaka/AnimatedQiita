@@ -1,5 +1,4 @@
 import VueRouter from 'vue-router';
-import ExampleComponent from "./components/ExampleComponent";
 import Top from "./views/Top";
 import ItemList from "./views/item/ItemList";
 import ItemDetail from "./views/item/ItemDetail";
@@ -7,6 +6,7 @@ import UserList from "./views/user/UserList";
 import UserDetail from "./views/user/UserDetail";
 import TagList from "./views/tag/TagList";
 import TagDetail from "./views/tag/TagDetail";
+import NavbarComponent from "./components/NavbarComponent";
 
 window.Vue = require('vue');
 
@@ -56,6 +56,6 @@ const router = new VueRouter({
 const app = new Vue({
     router,
     components: {
-        'example-component': ExampleComponent
+        'navbar-component': NavbarComponent
     }
 }).$mount('#app');

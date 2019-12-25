@@ -1,0 +1,30 @@
+@import url("../../node_modules/animate.css/animate.min.css");
+@import url("../../node_modules/hover.css/css/hover-min.css");
+@import url("../../node_modules/aos/dist/aos.css");
+
+.mask {
+  -webkit-clip-path: url(#svgPath);
+  clip-path: url(#svgPath);
+}
+
+.h-0 {
+  height: 0;
+}
+
+.duration {
+  &-1s {
+    animation-duration: 1s;
+  }
+  &-2s {
+    animation-duration: 2s;
+  }
+  &-3s {
+    animation-duration: 3s;
+  }
+  &-4s {
+    animation-duration: 4s;
+  }
+  &-5s {
+    animation-duration: 5s;
+  }
+}
