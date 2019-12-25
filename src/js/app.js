@@ -50,7 +50,8 @@ const router = new VueRouter({
         {
             path: '/users/:userId',
             name: 'user.detail',
-            component: UserDetail
+            component: UserDetail,
+            props: true
         },
     ]
 });
