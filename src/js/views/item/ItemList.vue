@@ -12,10 +12,12 @@
             <div class="container mt-5">
                 <div class="clearfix" v-for="(item, index) in items" v-bind:key="item.id">
                     <ItemCardComponent v-bind:index="index" v-bind:item="item"/>
+                    <!--todo ローディング-->
                 </div>
             </div>
         </div>
         <ToTopButton/>
+        <!--todo 遅延表示-->
     </div>
 </template>
 
