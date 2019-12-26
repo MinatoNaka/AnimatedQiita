@@ -7,12 +7,18 @@
                 <p>example example example example example example </p>
                 <p>example example example example example example </p>
             </div>
+            <div>
+                <p>Scroll↓↓</p>
+                <!--todo スクロールデザイン-->
+            </div>
         </div>
         <div class="container-fluid">
             <div class="container mt-5">
+                <transition leave-active-class="animated fadeOut">
+                    <Loading v-if="loading"/>
+                </transition>
                 <div class="clearfix" v-for="(item, index) in items" v-bind:key="item.id">
                     <ItemCardComponent v-bind:index="index" v-bind:item="item"/>
-                    <!--todo ローディング-->
                 </div>
             </div>
         </div>
@@ -23,15 +29,18 @@
 <script>
     import ItemCardComponent from "../../components/item/ItemCardComponent";
     import ToTopButton from "../../components/ToTopButton";
+    import Loading from "../../components/Loading";
 
     export default {
         components: {
             ItemCardComponent,
-            ToTopButton
+            ToTopButton,
+            Loading
         },
         data: function () {
             return {
-                items: []
+                items: [],
+                loading: true
             }
         },
         mounted() {
@@ -44,6 +53,7 @@
                         "Authorization": "Bearer " + process.env.MIX_QIITA_API_TOKEN
                     }
                 }).then((res) => {
+                    this.loading = false;
                     this.items = res.data;
                 });
             }
