@@ -1,15 +1,16 @@
 <template>
     <div>
         <div class="container-fluid bg-primary-light">
-            <div class="container p-5">
+            <div class="container pt-5 pb-3">
                 <h1 class="text-primary-dark mb-5">Popular Articles In Qiita</h1>
                 <p>example example example example example example </p>
                 <p>example example example example example example </p>
                 <p>example example example example example example </p>
             </div>
-            <div>
-                <p>Scroll↓↓</p>
-                <!--todo スクロールデザイン-->
+            <div class="container pb-2">
+                <p class="h5 text-center text-primary-dark animated pulse infinite duration-2s">
+                    <i class="fas fa-angle-double-down"/> Scroll <i class="fas fa-angle-double-down"/>
+                </p>
             </div>
         </div>
         <div class="container-fluid">
