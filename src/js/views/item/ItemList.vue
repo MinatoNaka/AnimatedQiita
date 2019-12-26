@@ -17,7 +17,6 @@
             </div>
         </div>
         <ToTopButton/>
-        <!--todo 遅延表示-->
     </div>
 </template>
 
