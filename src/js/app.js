@@ -1,4 +1,5 @@
 import VueRouter from 'vue-router';
+import VueSmoothScroll from 'vue-smoothscroll';
 import Top from "./views/Top";
 import ItemList from "./views/item/ItemList";
 import ItemDetail from "./views/item/ItemDetail";
@@ -12,6 +13,7 @@ window.Vue = require('vue');
 window.axios = require('axios');
 
 Vue.use(VueRouter);
+Vue.use(VueSmoothScroll);
 
 const router = new VueRouter({
     mode: 'history',

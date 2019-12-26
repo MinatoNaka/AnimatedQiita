@@ -1,8 +1,10 @@
 <template>
     <div class="container-fluid bg-primary-dark">
         <div class="container">
-            <nav class="navbar navbar-expand-sm navbar-dark">
-                <a class="navbar-brand hvr-bounce-in" href="#">Animated Qiita</a>
+            <nav id="nav" class="navbar navbar-expand-sm navbar-dark">
+                <router-link v-bind:to="{name: 'top'}" class="navbar-brand hvr-bounce-in">
+                    Animated Qiita
+                </router-link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

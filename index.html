@@ -11,9 +11,20 @@
 </head>
 <body>
 <div id="app">
-    <navbar-component v-if="$route.name.indexOf('top') === -1"></navbar-component>
-
-    <router-view></router-view>
+    <transition
+            mode="out-in"
+            enter-active-class="animated fadeInUp duration-1s"
+            leave-active-class="animated fadeOutRight duration-2s"
+    >
+        <navbar-component v-if="$route.name.indexOf('top') === -1"></navbar-component>
+    </transition>
+    <transition
+            mode="out-in"
+            enter-active-class="animated fadeInUp duration-1s"
+            leave-active-class="animated fadeOutRight duration-2s"
+    >
+        <router-view></router-view>
+    </transition>
 </div>
 
 <script src="dist/build/js/bundle.js"></script>
