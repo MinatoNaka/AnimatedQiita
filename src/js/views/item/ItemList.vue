@@ -49,7 +49,9 @@
         },
         methods: {
             getItems() {
-                axios.get('https://qiita.com/api/v2/items?page=1&per_page=20', {
+                const queries = this.buildQueries();
+
+                axios.get('https://qiita.com/api/v2/items?' + queries, {
                     headers: {
                         "Authorization": "Bearer " + process.env.MIX_QIITA_API_TOKEN
                     }
@@ -57,6 +59,20 @@
                     this.loading = false;
                     this.items = res.data;
                 });
+            },
+            buildQueries() {
+                const queryObject = this.$route.query;
+                let queries = 'query=';
+
+                if (Object.keys(queryObject).length === 0) {
+                    return queries + 'stocks:>10';
+                }
+
+                Object.keys(queryObject).forEach(function (key) {
+                    queries += key + ':' + queryObject[key];
+                });
+
+                return queries;
             }
         },
         beforeDestroy() {

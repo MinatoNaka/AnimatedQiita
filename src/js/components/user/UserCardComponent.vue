@@ -7,7 +7,7 @@
             v-bind:class="(isEven) ? 'float-left' : 'float-right'"
             style="width: 20rem"
     >
-        <router-link v-bind:to="{name: 'user.detail', params: {userId: user.id}}"
+        <router-link v-bind:to="{name: 'item.list', query: {user: user.id}}"
                      class="text-decoration-none hvr-grow">
             <!--todo item.listへのリンクにする-->
             <div class="card-header">
@@ -15,7 +15,7 @@
                     <div class="col-6">
                         <img v-bind:src="user.profile_image_url" class="" width="80%" alt="">
                     </div>
-                    <div class="col-6 pt-5 pl-5">
+                    <div class="col-6 pt-5">
                         <p class="h1">
                             <span class="badge badge-primary">
                                 <i class="fas fa-file-invoice"> {{ user.items_count }}</i>

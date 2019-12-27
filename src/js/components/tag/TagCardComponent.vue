@@ -7,7 +7,7 @@
             v-bind:class="(isEven) ? 'float-left' : 'float-right'"
             style="width: 20rem"
     >
-        <router-link v-bind:to="{name: 'tag.detail', params: {tagId: tag.id}}"
+        <router-link v-bind:to="{name: 'item.list', query: {tag: tag.id}}"
                      class="text-decoration-none hvr-grow">
             <!--todo item.listへのリンクにする-->
             <div class="card-header">

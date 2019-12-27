@@ -18,8 +18,8 @@
                 <transition leave-active-class="animated fadeOut">
                     <Loading v-if="loading"/>
                 </transition>
-                <div class="clearfix" v-for="(user , index) in users" v-bind:key="user.id">
-                    <UserCardComponent v-bind:index="index" v-bind:user="user"/>
+                <div class="clearfix" v-for="(item, index) in items" v-bind:key="item.id">
+                    <UserCardComponent v-bind:index="index" v-bind:user="item.user"/>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
         },
         data: function () {
             return {
-                users: [],
+                items: [],
                 loading: true
             }
         },
@@ -49,13 +49,13 @@
         },
         methods: {
             getUsers() {
-                axios.get('https://qiita.com/api/v2/users?page=1&per_page=20', {
+                axios.get('https://qiita.com/api/v2/items?query=stocks:100', {
                     headers: {
                         "Authorization": "Bearer " + process.env.MIX_QIITA_API_TOKEN
                     }
                 }).then((res) => {
                     this.loading = false;
-                    this.users = res.data;
+                    this.items = res.data;
                 });
             }
         },

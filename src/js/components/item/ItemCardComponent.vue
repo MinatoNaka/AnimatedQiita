@@ -14,7 +14,7 @@
                     <div class="col-6">
                         <img v-bind:src="item.user.profile_image_url" class="" width="80%" alt="">
                     </div>
-                    <div class="col-6 pt-5 pl-5">
+                    <div class="col-6 pt-5">
                         <p class="h1">
                             <span class="badge badge-primary">
                                 <i class="fas fa-thumbs-up"> {{ item.likes_count }}</i>
