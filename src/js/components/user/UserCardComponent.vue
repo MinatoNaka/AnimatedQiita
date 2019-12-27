@@ -7,29 +7,28 @@
             v-bind:class="(isEven) ? 'float-left' : 'float-right'"
             style="width: 20rem"
     >
-        <router-link v-bind:to="{name: 'item.detail', params: {itemId: item.id}}"
+        <router-link v-bind:to="{name: 'user.detail', params: {userId: user.id}}"
                      class="text-decoration-none hvr-grow">
+            <!--todo item.listへのリンクにする-->
             <div class="card-header">
                 <div class="row">
                     <div class="col-6">
-                        <img v-bind:src="item.user.profile_image_url" class="" width="80%" alt="">
+                        <img v-bind:src="user.profile_image_url" class="" width="80%" alt="">
                     </div>
                     <div class="col-6 pt-5 pl-5">
                         <p class="h1">
                             <span class="badge badge-primary">
-                                <i class="fas fa-thumbs-up"> {{ item.likes_count }}</i>
+                                <i class="fas fa-file-invoice"> {{ user.items_count }}</i>
                             </span>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="card-body bg-primary-dark">
-                <h5 class="card-title text-light">{{ item.title }}</h5>
-                <h6 class="card-subtitle my-2 text-primary-light">Posted at {{ item.created_at | date }}</h6>
-                <p class="card-text mt-2 small">
-                    <span v-for="tag in item.tags" class="badge badge-primary mx-1">
-                        <i class="fas fa-tag"> {{ tag.name }}</i>
-                    </span>
+                <h5 class="card-title text-light">{{ user.id}}</h5>
+                <h6 class="card-subtitle my-2 text-primary-light">{{ user.description }}</h6>
+                <p class="card-text mt-2">
+                    <button class="btn btn-block btn-primary">See This User's Popular Articles</button>
                 </p>
             </div>
         </router-link>
@@ -39,7 +38,7 @@
 <script>
     export default {
         props: {
-            item: {
+            user: {
                 type: Object,
                 required: true
             },
@@ -51,11 +50,6 @@
         computed: {
             isEven: function () {
                 return (this.index % 2 === 0);
-            }
-        },
-        filters: {
-            date: function (value) {
-                return value.slice(0, 10);
             }
         }
     }

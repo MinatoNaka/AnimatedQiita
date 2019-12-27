@@ -1,21 +1,47 @@
 <template>
     <div>
-        <p>User List</p>
-        <ul>
-            <li v-for="user in users">
-                <router-link v-bind:to="{name: 'user.detail', params: {userId: user.id}}">
-                    <button class="btn btn-success">User Detail</button>
-                </router-link>
-            </li>
-        </ul>
+        <div class="container-fluid bg-primary-light">
+            <div class="container pt-5 pb-3">
+                <h1 class="text-primary-dark mb-5">Popular Users In Qiita</h1>
+                <p>example example example example example example </p>
+                <p>example example example example example example </p>
+                <p>example example example example example example </p>
+            </div>
+            <div class="container pb-2">
+                <p class="h5 text-center text-primary-dark animated pulse infinite duration-2s">
+                    <i class="fas fa-angle-double-down"/> Scroll <i class="fas fa-angle-double-down"/>
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container mt-5">
+                <transition leave-active-class="animated fadeOut">
+                    <Loading v-if="loading"/>
+                </transition>
+                <div class="clearfix" v-for="(user , index) in users" v-bind:key="user.id">
+                    <UserCardComponent v-bind:index="index" v-bind:user="user"/>
+                </div>
+            </div>
+        </div>
+        <ToTopButton/>
     </div>
 </template>
 
 <script>
+    import UserCardComponent from "../../components/user/UserCardComponent";
+    import ToTopButton from "../../components/ToTopButton";
+    import Loading from "../../components/Loading";
+
     export default {
+        components: {
+            UserCardComponent,
+            ToTopButton,
+            Loading
+        },
         data: function () {
             return {
-                users: []
+                users: [],
+                loading: true
             }
         },
         mounted() {
@@ -28,9 +54,13 @@
                         "Authorization": "Bearer " + process.env.MIX_QIITA_API_TOKEN
                     }
                 }).then((res) => {
+                    this.loading = false;
                     this.users = res.data;
                 });
             }
+        },
+        beforeDestroy() {
+            this.$SmoothScroll(document.querySelector('#nav'), 2000);
         }
     }
 </script>
