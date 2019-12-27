@@ -8,6 +8,7 @@ import UserDetail from "./views/user/UserDetail";
 import TagList from "./views/tag/TagList";
 import TagDetail from "./views/tag/TagDetail";
 import NavbarComponent from "./components/NavbarComponent";
+import FooterComponent from "./components/FooterComponent";
 
 window.Vue = require('vue');
 window.axios = require('axios');
@@ -62,6 +63,7 @@ const router = new VueRouter({
 const app = new Vue({
     router,
     components: {
-        'navbar-component': NavbarComponent
+        'navbar-component': NavbarComponent,
+        'footer-component': FooterComponent
     }
 }).$mount('#app');

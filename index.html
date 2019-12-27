@@ -11,13 +11,7 @@
 </head>
 <body>
 <div id="app">
-    <transition
-            mode="out-in"
-            enter-active-class="animated fadeInUp duration-1s"
-            leave-active-class="animated fadeOutRight duration-2s"
-    >
-        <navbar-component v-if="$route.name.indexOf('top') === -1"></navbar-component>
-    </transition>
+    <navbar-component></navbar-component>
     <transition
             mode="out-in"
             enter-active-class="animated fadeInUp duration-1s"
@@ -25,6 +19,8 @@
     >
         <router-view></router-view>
     </transition>
+    <footer-component></footer-component>
+    <!--todo 画面遷移時にずれる-->
 </div>
 
 <script src="dist/build/js/bundle.js"></script>

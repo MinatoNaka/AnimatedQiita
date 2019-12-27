@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid bg-primary-light">
+    <div class="container-fluid bg-primary-light pb-5">
         <div id="eye-catch" class="container">
             <div class="row">
                 <div class="offset-sm-2 col-sm-8">
