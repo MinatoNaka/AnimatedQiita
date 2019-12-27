@@ -46,13 +46,16 @@
         },
         filters: {
             date: function (value) {
-                return value.slice(0, 10);
+                if (value) {
+                    return value.slice(0, 10);
+                }
             }
         },
         computed: {
             bodySummary() {
-                return this.item.body.slice(0, 100).replace(/\n/g, '<br>') + ' ...';
-            //    todo consoleエラー
+                if (this.item.body) {
+                    return this.item.body.slice(0, 100).replace(/\n/g, '<br>') + ' ...';
+                }
             }
         },
         beforeDestroy() {
