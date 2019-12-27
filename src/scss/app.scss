@@ -15,16 +15,30 @@
   &-1s {
     animation-duration: 1s;
   }
+
   &-2s {
     animation-duration: 2s;
   }
+
   &-3s {
     animation-duration: 3s;
   }
+
   &-4s {
     animation-duration: 4s;
   }
+
   &-5s {
     animation-duration: 5s;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #eye-catch {
+    max-width: 100%;
+
+    img {
+      max-width: 100%;
+    }
   }
 }

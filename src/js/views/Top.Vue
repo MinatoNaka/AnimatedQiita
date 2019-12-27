@@ -1,22 +1,21 @@
 <template>
     <div class="container-fluid bg-primary-light pb-5">
-        <div id="eye-catch" class="container">
+        <div class="container">
             <div class="row">
-                <div class="offset-sm-2 col-sm-8">
-                    <img class="mask" src="/dist/img/park.jpg" alt="">
+                <div id="eye-catch" class="mx-auto" style="width: 800px">
+                    <img class="mask anima" src="/dist/img/park.jpg" alt="">
                     <svg class="h-0 w-auto">
                         <clipPath id="svgPath">
-                            <text class="animated fadeInRight delay-1s slower" x="10" y="150" font-family="Impact"
+                            <text class="animated fadeInRight delay-1s slower" x="70" y="150" font-family="Impact"
                                   font-size="8em">
                                 Animated
                             </text>
-                            <text class="animated fadeInLeft delay-3s slower" x="400" y="300" font-family="Impact"
+                            <text class="animated fadeInLeft delay-3s slower" x="470" y="300" font-family="Impact"
                                   font-size="8em">
                                 Qiita
                             </text>
                         </clipPath>
                     </svg>
-                    <!--todo レスポンシブ対応-->
                 </div>
             </div>
         </div>
