@@ -9,7 +9,6 @@
     >
         <router-link v-bind:to="{name: 'item.list', query: {user: user.id}}"
                      class="text-decoration-none hvr-grow">
-            <!--todo item.listへのリンクにする-->
             <div class="card-header">
                 <div class="row">
                     <div class="col-6">

@@ -3,9 +3,9 @@
         <div class="container">
             <div class="row">
                 <div id="eye-catch" class="mx-auto" style="width: 800px">
-                    <img class="mask anima" src="/dist/img/park.jpg" alt="">
+                    <img class="mask" src="/dist/img/park.jpg" alt="">
                     <svg class="h-0 w-auto">
-                        <clipPath id="svgPath">
+                        <clipPath id="svgPath" class="animated pulse duration-3s delay-5s infinite">
                             <text class="animated fadeInRight delay-1s slower" x="70" y="150" font-family="Impact"
                                   font-size="8em">
                                 Animated
