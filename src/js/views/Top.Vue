@@ -59,7 +59,6 @@
             </div>
         </div>
     </div>
-    <!--todo 下のあまりスペース-->
 </template>
 
 <script>

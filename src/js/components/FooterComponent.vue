@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <footer class="container-fluid">
         <hr class="border-primary-dark">
         <div class="container">
             <p class="h1 text-center text-primary-dark mb-1">
@@ -12,7 +12,7 @@
                 &copy;copy right copy right
             </p>
         </div>
-    </div>
+    </footer>
 </template>
 
 <script>
