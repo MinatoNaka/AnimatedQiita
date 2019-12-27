@@ -7,6 +7,8 @@ jobs:
     steps:
       - checkout
       - run: yarn install
+      - run:
+          command: echo MIX_QIITA_API_TOKEN=${MIX_QIITA_API_TOKEN} > ~/.env
       - run: yarn run prod
       - persist_to_workspace:
           root: .
