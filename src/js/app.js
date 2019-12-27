@@ -4,9 +4,7 @@ import Top from "./views/Top";
 import ItemList from "./views/item/ItemList";
 import ItemDetail from "./views/item/ItemDetail";
 import UserList from "./views/user/UserList";
-import UserDetail from "./views/user/UserDetail";
 import TagList from "./views/tag/TagList";
-import TagDetail from "./views/tag/TagDetail";
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 
@@ -41,22 +39,10 @@ const router = new VueRouter({
             component: TagList
         },
         {
-            path: '/tags/:tagId',
-            name: 'tag.detail',
-            component: TagDetail,
-            props: true
-        },
-        {
             path: '/users',
             name: 'user.list',
             component: UserList
-        },
-        {
-            path: '/users/:userId',
-            name: 'user.detail',
-            component: UserDetail,
-            props: true
-        },
+        }
     ]
 });
 
