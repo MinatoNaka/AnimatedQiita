@@ -27,7 +27,7 @@
                 <h5 class="card-title text-light">{{ user.id}}</h5>
                 <h6 class="card-subtitle my-2 text-primary-light">{{ user.description }}</h6>
                 <p class="card-text mt-2">
-                    <button class="btn btn-block btn-primary">See This User's Popular Articles</button>
+                    <button class="btn btn-block btn-primary">See This User's New Articles</button>
                 </p>
             </div>
         </router-link>

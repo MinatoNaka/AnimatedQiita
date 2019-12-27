@@ -27,7 +27,7 @@
                 <h5 class="card-title text-light">{{ tag.id }}</h5>
                 <h6 class="card-subtitle my-2 text-primary-light">Followers {{ tag.followers_count }}</h6>
                 <p class="card-text mt-2">
-                    <button class="btn btn-block btn-primary">See This Tag's Popular Articles</button>
+                    <button class="btn btn-block btn-primary">See This Tag's New Articles</button>
                 </p>
             </div>
         </router-link>
