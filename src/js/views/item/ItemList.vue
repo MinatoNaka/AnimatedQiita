@@ -15,7 +15,7 @@
         </div>
         <div class="container-fluid">
             <div class="container mt-5">
-                <transition leave-active-class="animated fadeOut">
+                <transition leave-active-class="animated fadeOut duration-1s">
                     <Loading v-if="loading"/>
                 </transition>
                 <div class="clearfix" v-for="(item, index) in items" v-bind:key="item.id">

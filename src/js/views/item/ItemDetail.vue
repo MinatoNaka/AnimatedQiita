@@ -53,6 +53,9 @@
             bodySummary() {
                 return this.item.body.slice(0, 100).replace(/\n/g, '<br>') + ' ...';
             }
+        },
+        beforeDestroy() {
+            this.$SmoothScroll(document.querySelector('#nav'), 2000);
         }
     }
 </script>

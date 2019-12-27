@@ -62,5 +62,9 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        beforeDestroy() {
+            this.$SmoothScroll(document.querySelector('#nav'), 2000);
+        }
+    }
 </script>
