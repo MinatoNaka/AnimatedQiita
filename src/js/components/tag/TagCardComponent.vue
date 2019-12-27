@@ -12,10 +12,10 @@
             <!--todo item.listへのリンクにする-->
             <div class="card-header">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-5">
                         <img v-bind:src="tag.icon_url" class="" width="80%" alt="">
                     </div>
-                    <div class="col-6 pt-5 pl-5">
+                    <div class="col-7 pt-5">
                         <p class="h1">
                             <span class="badge badge-primary">
                                 <i class="fas fa-file-invoice"> {{ tag.items_count }}</i>

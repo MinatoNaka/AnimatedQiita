@@ -49,7 +49,7 @@
         },
         methods: {
             getTags() {
-                axios.get('https://qiita.com/api/v2/tags?page=1&per_page=20', {
+                axios.get('https://qiita.com/api/v2/tags?page=1&per_page=20&sort=count', {
                     headers: {
                         "Authorization": "Bearer " + process.env.MIX_QIITA_API_TOKEN
                     }
