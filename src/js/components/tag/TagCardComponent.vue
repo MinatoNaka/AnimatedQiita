@@ -1,6 +1,6 @@
 <template>
     <div
-            v-bind:data-aos="(isEven) ? 'zoom-in-right' : 'zoom-in-left'"
+            v-bind:data-aos="(isEven) ? 'fade-up-right' : 'fade-up-left'"
             data-aos-offset="200"
             data-aos-duration="1500"
             class="card shadow-lg mb-3"

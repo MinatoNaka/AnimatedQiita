@@ -1,6 +1,6 @@
 <template>
     <div
-            v-bind:data-aos="(isEven) ? 'zoom-in-right' : 'zoom-in-left'"
+            v-bind:data-aos="(isEven) ? 'flip-left' : 'flip-right'"
             data-aos-offset="200"
             data-aos-duration="1500"
             class="card shadow-lg mb-3"
