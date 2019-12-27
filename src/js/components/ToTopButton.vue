@@ -1,6 +1,6 @@
 <template>
     <span id="to-top" class="hvr-grow">
-        <button class="btn btn-primary shadow animated fadeInUp delay-3s" v-on:click="scrollToTop">Top</button>
+        <button class="btn btn-primary shadow animated fadeInUp delay-3s" v-on:click="scrollToTop"><i class="fas fa-angle-double-up"/></button>
     </span>
 </template>
 

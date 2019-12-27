@@ -52,6 +52,7 @@
         computed: {
             bodySummary() {
                 return this.item.body.slice(0, 100).replace(/\n/g, '<br>') + ' ...';
+            //    todo consoleエラー
             }
         },
         beforeDestroy() {
