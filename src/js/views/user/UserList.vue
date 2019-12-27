@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container-fluid bg-primary-light">
-            <div class="container pt-5 pb-3">
+            <div class="container pt-5 pb-3 text-center">
                 <h1 class="text-primary-dark mb-5">Popular Users In Qiita</h1>
                 <p>example example example example example example </p>
                 <p>example example example example example example </p>
